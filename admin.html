@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUDHVI NUTRITION Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-leaf"></i> PRUDHVI NUTRITION Admin
+                </a>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="active"><a href="#dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#appointments"><i class="fa-solid fa-calendar-check"></i> Appointments</a></li>
+                <li><a href="#messages"><i class="fa-solid fa-envelope"></i> Messages</a></li>
+                <li><a href="#video-testimonials"><i class="fa-solid fa-video"></i> Video Reviews</a></li>
+                <li><a href="#settings"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="topbar-right">
+                    <div class="notifications">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="admin-profile">
+                        <img src="assets/dietitian_profile.png" alt="Admin" class="avatar">
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard View -->
+            <div class="content-wrapper">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-green-light">
+                            <i class="fa-solid fa-calendar-check text-green"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>12</h3>
+                            <p>New Appointments</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-blue-light">
+                            <i class="fa-solid fa-users text-blue"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>145</h3>
+                            <p>Total Clients</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-orange-light">
+                            <i class="fa-solid fa-envelope text-orange"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>8</h3>
+                            <p>Unread Messages</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon bg-purple-light">
+                            <i class="fa-solid fa-indian-rupee-sign text-purple"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3></h3>
+                            <p>Revenue This Month</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Appointments Table -->
+                <div class="recent-appointments section-card">
+                    <div class="section-header">
+                        <h3>Recent Appointments</h3>
+                        <button class="btn btn-sm btn-outline">View All</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Client Name</th>
+                                    <th>Date</th>
+                                    <th>Service</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Oct 25, 2026</td>
+                                    <td>Weight Loss Program</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td>
+                                        <button class="action-btn approve"><i class="fa-solid fa-check"></i></button>
+                                        <button class="action-btn decline"><i class="fa-solid fa-xmark"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Jane Smith</td>
+                                    <td>Oct 26, 2026</td>
+                                    <td>PCOS Management</td>
+                                    <td><span class="status confirmed">Confirmed</span></td>
+                                    <td>
+                                        <button class="action-btn edit"><i class="fa-solid fa-pen"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Michael Brown</td>
+                                    <td>Oct 27, 2026</td>
+                                    <td>Diabetes Diet Plan</td>
+                                    <td><span class="status confirmed">Confirmed</span></td>
+                                    <td>
+                                        <button class="action-btn edit"><i class="fa-solid fa-pen"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Emily Davis</td>
+                                    <td>Oct 28, 2026</td>
+                                    <td>Custom Meal Plan</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td>
+                                        <button class="action-btn approve"><i class="fa-solid fa-check"></i></button>
+                                        <button class="action-btn decline"><i class="fa-solid fa-xmark"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Add Video Testimonial Form -->
+                <div class="video-admin section-card" id="video-testimonials" style="margin-top: 30px;">
+                    <div class="section-header">
+                        <h3>Manage Video Testimonials</h3>
+                    </div>
+                    <form id="addVideoForm" style="display: flex; flex-direction: column; gap: 15px; max-width: 500px;">
+                        <input type="text" id="videoTitle" placeholder="Video Title (e.g., Overcoming PCOS)" required
+                            style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; font-family: var(--font-body);">
+                        <input type="text" id="videoDesc" placeholder="Description (e.g., A client shares her success)"
+                            required style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px;">
+                        <input type="file" id="videoFile" accept="video/mp4,video/x-m4v,video/*" required
+                            style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; background: #fff;">
+                        <button type="submit" id="addVideoBtn" class="btn btn-primary"
+                            style="align-self: flex-start; background: #679279; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add
+                            Video</button>
+                    </form>
+
+                    <div class="added-videos" style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+                        <h4 style="margin-bottom: 15px; color: #2e5b3f;">Published Videos</h4>
+                        <ul id="adminVideoList" style="list-style: none; padding: 0;">
+                            <!-- Videos will appear here -->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+
+</html>
